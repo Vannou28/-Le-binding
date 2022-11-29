@@ -1,0 +1,16 @@
+
+<div class="profileCard">
+
+    <img [src]="user.photo" [alt]="user.description" />
+  
+    <section class="identificationCard">
+        <h2>Nom : {{user.name}}</h2>
+        <h2>Prénom : {{user.firstName}}</h2>
+        <p class="pAge" [style.display]="pDisplayAge">Age : {{user.age}}</p>
+        <input type="text"  [(ngModel)]="user.age" placeholder="two beer or not to beer"/>
+    </section>
+    
+    <section class="boutonSection">
+        <button (click)="ageShow()">Afficher/masquer mon age</button>
+    </section>
+</div>
