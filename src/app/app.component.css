@@ -1,0 +1,23 @@
+
+
+.titleH1{
+    color: red;
+}
+
+button{
+    margin: var(--toto);
+    padding: 8px;
+    font-size: 1rem;
+}
+
+section{
+    margin: 3rem;
+    padding: 2rem;
+    border: solid 2px grey;
+}
+
+
+.changeColorAndSize{
+    background-color: yellow;
+    font-size: 1rem;
+}

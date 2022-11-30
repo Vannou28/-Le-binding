@@ -1,1 +1,31 @@
-<app-user-profile></app-user-profile>
+<section>
+    <h1> 03.2 - Les Customs Directives</h1>
+    
+    <h2>Liste de film :</h2>
+    
+    <ul  *ngIf="isShowMovies">
+        <li appDisplayChangeColor>Forrest Gump</li>
+        <li>La vie est belle</li>
+        <li>Big</li>
+        <li>Fenêtre sur cour</li>
+    </ul>
+
+    <button (click)="showMovies();" [ngStyle]="{backgroundColor:isShowMovies ? 'green' : 'red'}"> Affichage de la liste : {{isShowMovies}}</button>
+
+</section>
+
+<section>
+    <h1>03.1 - Les Directives</h1>
+    <h1 [ngClass]="{titleH1:isAdmin}">{{ title }}!</h1>
+
+    <div>
+        <button>View</button>
+        <button *ngIf="isAdmin">Edit</button>
+        <button (click)="changeAdmin()" [ngStyle]="{backgroundColor:isAdmin ? 'green' : 'red'}">Admin est a {{isAdmin}}</button>
+    </div>
+</section>
+
+<section>
+    <h1>02 - Le binding</h1>
+    <app-user-profile></app-user-profile>
+</section>
